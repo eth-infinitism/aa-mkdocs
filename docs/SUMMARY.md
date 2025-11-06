@@ -46,6 +46,7 @@
 
 - [📚 Resources](resources/)
   - [README](resources/README.md)
+  - [Deployment Addresses](resources/deployments.md)
   - [Reading Materials](resources/reading-material.md)
   - [Videos](resources/videos.md)
   - [FAQ](resources/faqs.md)
