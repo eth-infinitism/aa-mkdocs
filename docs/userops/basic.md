@@ -3,7 +3,7 @@
 This guide will help understanding how to broadcast a [7702](https://eip7702.io/) userop using smart wallet implemented [here](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol)
 
 ### 1. Create Smart Account Client
-Refer [here](https://viem.sh/account-abstraction/accounts/smart#smart-accounts) to understand how to create different smart account clients. **Only use wallets which support entrypoint v0.8**
+Refer [here](https://viem.sh/account-abstraction/accounts/smart#smart-accounts) to understand how to create different smart account clients. **Only use wallets which support entrypoint v0.9**
 === "account.ts"
     ```ts
     import { commonClient } from './client'
@@ -12,6 +12,7 @@ Refer [here](https://viem.sh/account-abstraction/accounts/smart#smart-accounts) 
     const owner = privateKeyToAccount('0x...') // add private key here
 
     export const smartAccount = await toSimple7702SmartAccount({
+        implementation: "0xa46cc63eBF4Bd77888AA327837d20b23A63a56B5", // simple7702Account for ep9
         client: commonClient,
         owner,
     });
@@ -39,10 +40,13 @@ Refer [here](https://viem.sh/account-abstraction/accounts/smart#smart-accounts) 
     const owner = privateKeyToAccount('0x...') // add private key here
 
     const smartAccount = await toSimple7702SmartAccount({
+        implementation: "0xa46cc63eBF4Bd77888AA327837d20b23A63a56B5", // simple7702Account for ep9
         client: commonClient,
         owner,
     })
 
+    // overriding for ep9 address
+    smartAccount.entryPoint.address = "0x433709009B8330FDa32311DF1C2AFA402eD8D009"
     console.log("wallet:: ", smartAccount.address)
 
     // check sender's code to decide if eip7702Auth tuple is necessary for userOp.

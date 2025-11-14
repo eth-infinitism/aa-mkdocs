@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get up and running with EntryPoint v0.8 and 7702 UserOperations in under 5 minutes! This guide will walk you through with installing the necessary dependencies and creating bundler client.
+Get up and running with EntryPoint v0.9 and 7702 UserOperations in under 5 minutes! This guide will walk you through with installing the necessary dependencies and creating bundler client.
 
 ## Installation
 

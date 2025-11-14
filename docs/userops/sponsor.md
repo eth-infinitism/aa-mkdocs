@@ -11,6 +11,7 @@ This guide will help understanding how to broadcast a [7702](https://eip7702.io/
     const owner = privateKeyToAccount('0x...') // add private key here
 
     export const smartAccount = await toSimple7702SmartAccount({
+        implementation: "0xa46cc63eBF4Bd77888AA327837d20b23A63a56B5", // simple7702Account for ep9
         client: commonClient,
         owner,
     });
@@ -54,10 +55,13 @@ Refer [here](https://viem.sh/account-abstraction/clients/paymaster) for more opt
     const owner = privateKeyToAccount('0x...') // add private key here
 
     const smartAccount = await toSimple7702SmartAccount({
+        implementation: "0xa46cc63eBF4Bd77888AA327837d20b23A63a56B5", // simple7702Account for ep9
         client: commonClient,
         owner,
     })
 
+    // overriding for ep9 address
+    smartAccount.entryPoint.address = "0x433709009B8330FDa32311DF1C2AFA402eD8D009"
     console.log("wallet:: ", smartAccount.address)
 
     // check sender's code to decide if eip7702Auth tuple is necessary for userOp.
