@@ -15,7 +15,7 @@ which allows for the Account and the Paymaster to sign the rest of the `UserOper
 3. Build the rest of the `UserOperation` and send it for signing to the Account and the Paymaster services in parallel.
 4. Set the `signature` field of the `UserOperation` to the result of the Account signature as usual.
 5. Calculate the size of the Paymaster Signature and store it in a `uint16 paymasterSignatureSize` variable.
-6. Set the `paymasterSignature` field of the `UserOperation` to exactly `abi.encodePacked(paymasterAndData, paymasterSignatureSize, PAYMASTER_SIG_MAGIC)`.
+6. Replace the `paymasterAndData` field with the value `abi.encodePacked(paymasterAndData, paymasterSignatureSize, PAYMASTER_SIG_MAGIC)`.
 
 ## Summary of `paymasterAndData` format
 
