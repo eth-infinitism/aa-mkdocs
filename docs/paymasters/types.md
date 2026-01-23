@@ -53,6 +53,23 @@ Caution: swaps can be complex and require slippage/timing protection.
 
 ---
 
+## 🔗 CrossChainPaymaster
+
+Enables atomic cross-chain execution for Smart Accounts via the [WeissChannels](../cross-chain/README.md) protocol.
+
+**Use case:** Single-signature transactions that span multiple L2 chains
+
+**How it works:**
+
+- User locks funds on the source chain via the CrossChainPaymaster
+- XLP (Crosschain Liquidity Provider) issues a voucher for destination chain funds
+- User executes on destination chain, consuming the voucher
+- XLP claims locked funds on source chain
+
+This model enables seamless cross-chain transfers and multichain operations without custodial bridges. See [Cross-Chain Architecture](../cross-chain/architecture.md) for details.
+
+---
+
 ## 🧩 Hybrid and Custom Patterns
 
 - **Quota-based Paymasters:** Allow N txs per user/day

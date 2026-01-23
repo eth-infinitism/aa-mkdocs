@@ -26,6 +26,15 @@ nav:
     - paymasters/design-patterns.md
     - paymasters/examples-and-sdks.md
     - paymasters/paymaster-signature.md
+  - "🔗 Cross-Chain":
+    - cross-chain/README.md
+    - cross-chain/overview.md
+    - cross-chain/architecture.md
+    - cross-chain/contracts.md
+    - cross-chain/sdk.md
+    - cross-chain/fees-and-economics.md
+    - cross-chain/security.md
+    - cross-chain/whitepaper.md
   - "📝 7702 Userops Guide":
     - userops/quick-start.md
     - userops/basic.md

@@ -19,6 +19,18 @@ L2s are not just cheaper — they are often **more AA-friendly**.
 
 ---
 
+## 🔗 Cross-Chain Interoperability
+
+L2 fragmentation creates challenges: users have assets spread across chains, each with its own gas market and bridging delays. [WeissChannels](../cross-chain/README.md) addresses this by enabling:
+
+- **Single-signature cross-chain execution** via Merkle-based Multichain UserOps
+- **Atomic swaps** between L2s using the CrossChainPaymaster
+- **L1-secured dispute resolution** for trustless operation
+
+This allows smart accounts to treat multiple L2s as a unified experience. See [Cross-Chain Overview](../cross-chain/overview.md) for the full motivation.
+
+---
+
 ## 🔧 Infrastructure Differences
 
 Each L2 implements different architecture:
