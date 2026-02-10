@@ -56,6 +56,20 @@ Their system integrates seamlessly with their smart wallet framework.
 
 ---
 
+## 🔧 Openfort
+
+[Openfort](https://www.openfort.io/docs/development/gas-sponsorship) provides a production-grade Paymaster with full EntryPoint v0.9 support:
+
+- **Parallelizable signing** — user and Paymaster sign independently for lower latency
+- **Verifying Mode** with a flexible policy engine (contract, function, time, gas budget rules)
+- **ERC-20 Mode** with 8 sub-modes including pre-funding, constant fees, and recipient routing
+- Pay gas in stablecoins (USDC, USDT) or any ERC-20 token with off-chain exchange rates
+- [Open-source contracts](https://github.com/openfort-xyz/openfort-contracts/tree/main/contracts/paymaster/PaymasterV3EPv9) for full transparency
+
+Openfort's v0.9 Paymaster architecture removes the Paymaster from the critical signing path, enabling faster UX and independent scaling of auth and sponsorship services.
+
+---
+
 ## 🔧 Pimlico
 
 [Pimlico](https://docs.pimlico.io/references/paymaster) offers a robust Paymaster infrastructure:
@@ -95,4 +109,4 @@ Good fit for developers seeking end-to-end smart wallet + paymaster integration.
 
 ## ✅ Summary
 
-From token-based gas models to off-chain verified sponsorship, Paymasters are becoming production-grade thanks to services like Pimlico, Etherspot, and Circle. Choose your tooling based on how much control, abstraction, or UX fidelity you need.
+From token-based gas models to off-chain verified sponsorship, Paymasters are becoming production-grade thanks to services like Pimlico, Etherspot, Openfort, and Circle. Choose your tooling based on how much control, abstraction, or UX fidelity you need.
